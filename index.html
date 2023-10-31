@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom task</title>
+    <style>
+         
+
+        div {
+            display: grid;
+             grid-gap: 10px; 
+            justify-content: center;
+            grid-template-columns: 100%, 100%, 100%;
+            grid-template-rows: 100px, 100px;
+            width: 600px;
+            height: 300px;
+        position: relative;
+            left: 35%;
+            margin-top: 5%;
+        }
+        div img {
+            /* padding: 3px; */
+        }
+
+        .img1 {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            width: 100%;
+            height: 100px;
+        }
+
+        .img2 {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            width: 100%;
+            height: 100px;
+        }
+
+        .img3 {
+            grid-column: 2/3;
+            grid-row: 2/3;
+            width: 100%;
+            height: 100px;
+        }
+
+        .img4 {
+            grid-column: 1/2;
+            grid-row: 2/3;
+            width: 100%;
+            height: 100px;
+        }
+
+        .img5 {
+            grid-column: 3/4;
+            grid-row: 1/2;
+            width: 100%;
+            height: 100px;
+        }
+
+        .img6 {
+            grid-column: 3/4;
+            grid-row: 2/3;
+            width: 100%;
+            height: 100px;
+        }
+
+        .img7 {
+            grid-column: 3/4;
+            grid-row: 3/4;
+            width: 100%;
+            height: 100px;
+        }
+
+        .img8 {
+            grid-column: 1/2;
+            grid-row: 3/4;
+            width: 100%;
+            height: 100px;
+        }
+
+        .img9 {
+            grid-column: 2/3;
+            grid-row: 3/4;
+            width: 100%;
+            height: 100px;
+        }
+
+        button {
+            position: relative;
+            top: 50px;
+            left: 45%;
+            padding: 10px;
+            background-color: rgb(248, 177, 188);
+            border-radius: 10px;
+        }
+     
+    </style>
+</head>
+
+<body>
+ 
+
+ 
+
+    <div >
+        <img src="./cut_image_part_01.jpg" alt="" width="100px" height="100%" class="img1">
+        <img src="./cut_image_part_02.jpg" alt="" width="100px" height="100% " class="img2">
+        <img src="./cut_image_part_04.jpg" alt="" width="100px" height="100%" class="img3">
+        <img src="./cut_image_part_05.jpg" alt="" width="100px" height="100%" class="img4">
+        <img src="./cut_image_part_03.jpg" alt="" class="img5">
+        <img src="./cut_image_part_06.jpg" alt="" class="img6">
+        <img src="./cut_image_part_07.jpg" alt="" class="img7">
+        <img src="./cut_image_part_08.jpg" alt="" class="img8">
+        <img src="./cut_image_part_09.jpg" alt="" class="img9">
+    </div>
+
+    <button>
+        shuffle
+    </button>
+
+    <button>
+        unsheffile
+    </button>
+
+
+
+<button class="com">combine</button>
+
+<button>
+    uncombime
+</button>
+    <script>
+        
+        let flower = document.getElementsByTagName("img")
+        
+        let button = document.getElementsByTagName("button")
+    
+
+        dd=document.getElementsByTagName("div")
+        button[0].addEventListener("click", () => {
+
+            flower[0].setAttribute("src", "cut_image_part_02.jpg")
+            flower[1].setAttribute("src", "cut_image_part_01.jpg")
+            flower[2].setAttribute("src", "cut_image_part_05.jpg")
+            flower[3].setAttribute("src", "cut_image_part_04.jpg")
+            flower[6].setAttribute("src", "cut_image_part_09.jpg")
+            flower[7].setAttribute("src", "cut_image_part_07.jpg")
+            flower[8].setAttribute("src", "cut_image_part_08.jpg")
+        })
+
+        button[2].addEventListener("click",()=>{
+        for(i=0;i<dd.length;i++){
+            var b=dd[i]
+            b.style.gridGap="0"
+        }
+    
+       
+        })
+        button[3].addEventListener("click",()=>{
+        for(i=0;i<dd.length;i++){
+            var b=dd[i]
+            b.style.gridGap="10px"
+        }
+        })
+        button[1].addEventListener("click",()=>{
+        for(i=0;i<flower.length;i++){
+            var b=flower[i]
+            
+        }
+        })
+        button[1].addEventListener("click", () => {
+            flower[1].setAttribute("src", "cut_image_part_01.jpg")
+flower[0].setAttribute("src", "cut_image_part_09.jpg")
+flower[3].setAttribute("src", "cut_image_part_06.jpg")
+flower[2].setAttribute("src", "cut_image_part_08.jpg")
+flower[8].setAttribute("src", "cut_image_part_07.jpg")
+flower[6].setAttribute("src", "cut_image_part_05.jpg")
+flower[7].setAttribute("src", "cut_image_part_04.jpg")
+
+})
+
+    </script>
+
+</body>
+
+</html>

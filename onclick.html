@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>         button{
+        padding: 10px;
+        margin: 10px;
+background-color: rgb(183, 177, 177);
+    color: black;
+    font-weight: bolder;
+    border-radius: 15px;
+    }
+    img{
+        position: relative;
+        left: 35%;
+        width: 200px;
+        height: 200px;
+    } </style>
+</head>
+<body>
+        <button > nagarjuna image </button>
+    <button> chirangivi image</button>
+    <button> pawan kalyan img</button>
+    <button> raviteja img</button>
+    <button> maheshbabu img</button>
+    <button> ram charan img</button>
+    <button> allu arjun img</button>
+    <button> devarakonda img</button>
+    <button> clear</button> 
+    <script>
+         let img1 = document.createElement("img");
+        img1.style.display = "block"
+
+        document.body.appendChild(img1)
+        let button = document.getElementsByTagName("button")
+
+        let imgg = document.getElementsByTagName("img")
+        button[0].addEventListener("click", () => {
+
+            let imgg = document.getElementsByTagName("img")
+            imgg[0].setAttribute("src", "./images.jpeg")
+            // console.log(imgg);
+            img1.style.display = "block"
+        })
+
+        // console.log(button[0]);
+        button[1].addEventListener("click", () => {
+
+            imgg[0].setAttribute("src", "./download.jpeg")
+
+            img1.style.display = "block"
+        })
+        button[2].addEventListener("click", () => {
+
+            imgg[0].setAttribute("src", "./pavan.jpeg")
+            img1.style.display = "block"
+        })
+        button[3].addEventListener("click", () => {
+
+            imgg[0].setAttribute("src", "./ravi.jpeg")
+            img1.style.display = "block"
+        })
+        button[4].addEventListener("click", () => {
+
+            imgg[0].setAttribute("src", "./mahesh.jpeg")
+            img1.style.display = "block"
+        })
+        button[5].addEventListener("click", () => {
+
+            imgg[0].setAttribute("src", "./ram characha.jpeg")
+            img1.style.display = "block"
+        })
+        button[6].addEventListener("click", () => {
+
+            imgg[0].setAttribute("src", "./allu.jpeg")
+            img1.style.display = "block"
+        })
+        button[7].addEventListener("click", () => {
+
+            imgg[0].setAttribute("src", "./devarakonda.jpeg")
+            img1.style.display = "block"
+        })
+        button[8].addEventListener("click",()=>{
+            img1.style.display = "none"
+        })
+    </script>
+</body>
+
+
+
+</html>
